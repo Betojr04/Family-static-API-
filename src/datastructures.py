@@ -15,17 +15,27 @@ class FamilyStructure:
         # example list of members
         self._members = []
 
+    def print_last_name(self):
+        print(self.last_name)
+
     # read-only: Use this method to generate random members ID's when adding members into the list
     def _generateId(self):
         return randint(0, 99999999)
 
     def add_member(self, member):
         # fill this method and update the return
-        pass
+        self._members.append(member)
+        
 
     def delete_member(self, id):
         # fill this method and update the return
-        pass
+        #                      (c) => c[1] > 300000000, 
+        new_family = []
+        for member in self._members:
+            if member['id'] != id:
+                new_family.push(member)
+        self._members = new_family
+
 
     def get_member(self, id):
         # fill this method and update the return

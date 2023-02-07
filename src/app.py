@@ -23,6 +23,7 @@ def handle_invalid_usage(error):
 # generate sitemap with all your endpoints
 @app.route('/')
 def sitemap():
+    jackson_family.print_last_name()
     return generate_sitemap(app)
 
 @app.route('/members', methods=['GET'])
